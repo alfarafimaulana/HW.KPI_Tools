@@ -12,6 +12,7 @@ UPCBT03 = df1[(df1['NE Name'] == 'UPCBT03')]
 UPPLB02 = df1[(df1['NE Name'] == 'UPPLB02')]
 UPBNB02 = df1[(df1['NE Name'] == 'UPBNB02')]
 UPPNB04 = df1[(df1['NE Name'] == 'UPPNB04')]
+UPPNB06 = df1[(df1['NE Name'] == 'UPPNB06')] 
 
 dfhead= df1.head()
 print(dfhead)
@@ -23,6 +24,7 @@ y = UPCBT03[headerinfo]
 y1 = UPPLB02[headerinfo]
 y2 = UPBNB02[headerinfo]
 y3 = UPPNB04[headerinfo]
+y4 = UPPNB06[headerinfo]
 
 
 plt.title('Traffic')
@@ -30,6 +32,7 @@ plt.plot(time,y, linewidth=0.5)
 plt.plot(time,y1, linewidth=0.5)
 plt.plot(time,y2, linewidth=0.5)
 plt.plot(time,y3, linewidth=0.5)
+plt.plot(time,y4, linewidth=0.5)
 plt.xlabel('Dates')
 plt.ylabel('Nominal (juta)')
 plt.show()
