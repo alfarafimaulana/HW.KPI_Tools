@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 
 
-df1 = pd.read_csv('D:/TOOLS for improvement/traffic.csv',sep =',')
+df1 = pd.read_csv('traffic.csv',sep =',')
 # df2 = df1['NE Name'].str.startswith('UPBNB01')
 
 df1 = df1.sort_values(by=['NE Name','Start Time'], ascending=True, na_position='first')
