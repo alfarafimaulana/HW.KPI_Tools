@@ -16,18 +16,19 @@ DPS_ASBC03 = df1[(df1['NE Name'] == 'DPS_ASBC03')]
 headerinfo =  "Rate of ABCF Successful Initial Registrations (%)"
 headerinfo2 =  "Number of ABCF Successful Initial Registrations (times)"
 
-print(headerinfo.count)
+xdesc = (df1['Period (min)'].value_counts()[5])
 
 time = DPS_ASBC01["Start Time"]
 y1 = DPS_ASBC01[headerinfo]
 y2 = DPS_ASBC02[headerinfo]
 y3 = DPS_ASBC03[headerinfo]
 
-
-
 y12 = DPS_ASBC01[headerinfo2]
 y22 = DPS_ASBC02[headerinfo2]
 y32 = DPS_ASBC03[headerinfo2]
+
+# headerinfocount = time.count
+# print(headerinfocount)
 
 plt.title('Traffic')
 plt.plot(time,y1, linewidth=0.5)
@@ -35,7 +36,7 @@ plt.plot(time,y2, linewidth=0.5)
 plt.plot(time,y3, linewidth=0.5)
 plt.xlabel('Dates')
 plt.ylabel('Nominal (juta)')
-plt.xticks([5,10,15,20])
+plt.xticks([0, xdesc/9])
 plt.show()
 
 # plt.title('Traffic')
